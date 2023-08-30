@@ -1,6 +1,6 @@
 class clothesPage {
   get firstItemButton() {
-    return cy.get("#pta-product-204499841-0 p");
+    return cy.get("#product-204460685");
   }
 
   clickFirstItemButton() {
@@ -9,7 +9,7 @@ class clothesPage {
   }
 
   get favButton() {
-    return cy.get("#product-204499841 > .saveForLater_mm1gc");
+    return cy.get("#product-204460685 > .saveForLater_mm1gc");
   }
 
   clickFavButton() {

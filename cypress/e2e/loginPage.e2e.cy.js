@@ -1,7 +1,7 @@
 const header = require("../pages/components/header");
 const loginPage = require("../pages/loginPage");
 
-describe.skip("login page test", () => {
+describe("login page test", () => {
   it("should open login page", () => {
     loginPage.navigate("https://www.asos.com/");
     header.clickEnterButton();

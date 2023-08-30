@@ -46,8 +46,35 @@ class header {
   }
 
   clickFavIconButton() {
-    this.favIconButton.scrollIntoView()
+    cy.scrollTo("top");
+    cy.scrollTo("top");
     this.favIconButton.click();
+  }
+
+  get searchButton() {
+    return cy.get(`[data-testid="searchIcon"]`);
+  }
+
+  clickSearchButton() {
+    this.searchButton.click();
+  }
+
+  get searchInput() {
+    return cy.get(`[data-testid="search-input"]`);
+  }
+
+  fillSearchInput(input) {
+    this.searchInput.type(input);
+    this.searchInput.type("{enter}");
+  }
+
+  get countrySelector() {
+    return cy.get(".qMg7GGV:nth-child(1)");
+  }
+
+  clickCountrySelector() {
+    // this.countrySelector.scrollIntoView()
+    this.countrySelector.click();
   }
 }
 module.exports = new header();

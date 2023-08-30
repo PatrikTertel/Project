@@ -12,9 +12,8 @@ class itemPage {
   }
 
   clickSizeButton() {
-    this.sizeButton.click()
+    this.sizeButton.click();
   }
-
 }
 
 module.exports = new itemPage();

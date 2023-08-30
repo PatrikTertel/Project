@@ -2,10 +2,9 @@ const header = require("../pages/components/header");
 const mainPage = require("../pages/mainPage");
 const loginPage = require("../pages/loginPage");
 const clothesPage = require("../pages/clothesPage");
-const itemPage = require("../pages/itemPage");
-const favoritsPage = require("../pages/favoritsPage")
+const favoritsPage = require("../pages/favoritsPage");
 
-describe("Bag tests", () => {
+describe("Favorits page test", () => {
   it("should add item to favorits", () => {
     loginPage.navigate("https://www.asos.com/");
     header.clickManButton();
@@ -15,7 +14,9 @@ describe("Bag tests", () => {
     mainPage.clickCloseButton();
     clothesPage.clickFavButton();
     header.clickFavIconButton();
-    cy.contains('Weekday Johnny 5-pack Boxer Set in black ').should('exist');
+    cy.contains("adidas Sportswear Tiro striped t-shirt in green", {
+      timeout: 10000,
+    }).should("exist");
   });
 
   it("should delete from favorits", () => {
@@ -28,11 +29,10 @@ describe("Bag tests", () => {
     clothesPage.clickFavButton();
     header.clickFavIconButton();
     favoritsPage.clickDeleteButton();
-    favoritsPage.noItemsText.should('be.visible')
-
+    favoritsPage.noItemsText.should("be.visible");
   });
 
-  it.skip("should remove after adding to bag", () => {
+  it("should remove after adding to bag", () => {
     loginPage.navigate("https://www.asos.com/");
     header.clickManButton();
     header.clickClothingButton();
@@ -41,24 +41,8 @@ describe("Bag tests", () => {
     mainPage.clickCloseButton();
     clothesPage.clickFavButton();
     header.clickFavIconButton();
-    favoritsPage.clickSizeButton(1)
-    favoritsPage.clickMoveToBagButton()
-    cy.wait(10000)
-    // favoritsPage.clickFirstSizeButton()
-
-
+    favoritsPage.clickSizeButton(1);
+    favoritsPage.clickMoveToBagButton();
+    cy.get(".content_Nbbyw").should("be.visible"); //На сайте есть проблема с корзиной, выдает ошибку. Завязался на появление поп-апа
   });
-
-
-  it.skip('should add item to bag', () => {
-      loginPage.navigate('https://www.asos.com/')
-      header.clickManButton()
-      header.clickClothingButton()
-      header.clickBestsellersButton()
-      mainPage.clickDeliverPopup()
-      mainPage.clickCloseButton()
-      clothesPage.clickFirstItemButton()
-      // itemPage.clickSizeButton()
-      // itemPage.clickAddToBagButton()
-    })
 });
