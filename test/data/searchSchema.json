@@ -1,0 +1,185 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "suggestionGroups": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "indexName": {
+                "type": "string"
+              },
+              "indexTitle": {
+                "type": "string"
+              },
+              "suggestions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "searchTerm": {
+                        "type": "string"
+                      },
+                      "numberOfResults": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "searchTerm",
+                      "numberOfResults"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "indexName",
+              "indexTitle",
+              "suggestions"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "suggestionGroups"
+    ]
+  }
