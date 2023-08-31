@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     viewportWidth: 1920,
     viewportHeight: 1080,
@@ -8,6 +9,8 @@ module.exports = defineConfig({
       on("before:spec", (spec) => {
         userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 11_2 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/75.0.3770.70 Mobile/15C114 Safari/604.1";
       });
+      screenshotOnRunFailure=true;
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });

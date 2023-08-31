@@ -1,6 +1,5 @@
 const header = require("../pages/components/header");
 const loginPage = require("../pages/loginPage");
-
 const countrySelectorPage = require("../pages/countrySelectorPage");
 
 describe("Search field functionality", () => {
